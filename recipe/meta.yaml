@@ -1,5 +1,5 @@
 {% set name = "bytecode" %}
-{% set version = "0.10.0" %}
+{% set version = "0.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f78a312880173f1d20aef2eceb8eb959dc6c2167966b757fef201b8af839f802
+  sha256: 6c7f73b7aa2d2c5470d80da2e8c15f4c43314a08e9f74bac7f34bc1a802f49ea
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,7 +30,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: COPYING
-  summary: 'A Python module to generate and modify Python bytecode.'
+  summary: A Python module to generate and modify Python bytecode.
   doc_url: https://bytecode.readthedocs.io/
   dev_url: https://github.com/vstinner/bytecode
 
