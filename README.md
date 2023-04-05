@@ -1,11 +1,11 @@
-About bytecode
-==============
+About bytecode-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bytecode-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/vstinner/bytecode
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bytecode-feedstock/blob/main/LICENSE.txt)
 
 Summary: A Python module to generate and modify Python bytecode.
 
