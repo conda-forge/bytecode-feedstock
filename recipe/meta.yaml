@@ -20,10 +20,15 @@ requirements:
     - pip
   run:
     - python >=3.6
+    - typing_extensions  # [py<310]
 
 test:
   imports:
     - bytecode
+    - bytecode.instr
+    - bytecode.flags
+    - bytecode.concrete
+    - bytecode.cfg
 
 about:
   home: https://github.com/vstinner/bytecode
@@ -37,3 +42,5 @@ about:
 extra:
   recipe-maintainers:
     - MatthieuDartiailh
+    - gabrielcnr
+    - marcelotrevisani
