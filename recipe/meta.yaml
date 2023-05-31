@@ -11,19 +11,24 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
+    - typing_extensions
 
 test:
   imports:
     - bytecode
+    - bytecode.instr
+    - bytecode.flags
+    - bytecode.concrete
+    - bytecode.cfg
 
 about:
   home: https://github.com/vstinner/bytecode
@@ -37,3 +42,5 @@ about:
 extra:
   recipe-maintainers:
     - MatthieuDartiailh
+    - gabrielcnr
+    - marcelotrevisani

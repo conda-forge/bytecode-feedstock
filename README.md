@@ -148,4 +148,6 @@ Feedstock Maintainers
 =====================
 
 * [@MatthieuDartiailh](https://github.com/MatthieuDartiailh/)
+* [@gabrielcnr](https://github.com/gabrielcnr/)
+* [@marcelotrevisani](https://github.com/marcelotrevisani/)
 
