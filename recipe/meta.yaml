@@ -1,5 +1,5 @@
 {% set name = "bytecode" %}
-{% set version = "0.14.2" %}
+{% set version = "0.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 386378d9025d68ddb144870ae74330a492717b11b8c9164c4034e88add808f0c
+  sha256: 0908a8348cabf366b5c1865daabcdc0d650cb0cbdeb1750cc90564852f81945c
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
