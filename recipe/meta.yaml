@@ -1,13 +1,13 @@
 {% set name = "bytecode" %}
-{% set version = "0.15.1" %}
+{% set version = "0.16.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7263239a8d3f70fc7c303862b20cd2c6788052e37ce0a26e67309d280e985984
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 06676a3c3bccc9d3dc73ee625650ea57df2bc117358826f4f290f0e1faa42292
 
 build:
   noarch: python
@@ -16,19 +16,25 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
+    - setuptools >=61.2
+    - wheel
+    - setuptools_scm >=3.4.3
+    # From setuptools_scm[toml]
+    - tomli >=1
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - typing_extensions
 
 test:
   imports:
     - bytecode
-    - bytecode.instr
-    - bytecode.flags
-    - bytecode.concrete
-    - bytecode.cfg
+  commands:
+    - pip check
+  requires:
+    - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/vstinner/bytecode
@@ -44,3 +50,4 @@ extra:
     - MatthieuDartiailh
     - gabrielcnr
     - marcelotrevisani
+    - thewchan
