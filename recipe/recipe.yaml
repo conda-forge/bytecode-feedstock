@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: bytecode
-  version: "0.19.1"
+  version: "0.19.2"
   python_min: "3.11"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: f59a6a51a980037f64196448504d12fb04937ae8dcb980943265e799af2943ae
+  sha256: f3a59afb6038fa1c16689caff2958ad20157742c2a25478fd681bc057ad66142
 
 build:
   number: 0
