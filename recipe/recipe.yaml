@@ -22,7 +22,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - setuptools >=61.2
+    - hatchling
     - wheel
     - setuptools_scm >=3.4.3
     # From setuptools_scm[toml]
